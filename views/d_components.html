@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/assets/css/pages/developer/components.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+    <title>Componentes</title>
+  </head>
+  <body>
+
+    <div class="popup_component">
+      <div class="close_component">&times;</div>
+      <div class="form">
+          <h2>Nova Componente</h2>
+          <form id="componentForm" action="/iComponent" method="POST">
+              <div class="form-element">
+                  <label for="name">Nome:</label>
+                  <input type="text" id="name" name="name" placeholder="Insira Nome" required>
+              </div>
+              <div class="form-element">
+                  <label for="descricao">Descrição:</label>
+                  <input type="text" id="descricao" name="descricao" placeholder="Insira Descrição" required>
+              </div>
+              <div class="form-element">
+                  <label for="id_comp" class="type">Dependência:</label>
+                  <div class="custom-select">
+                      <select name="id_comp" id="componentSelect" required>
+                          <option value="0">Nenhuma</option>
+                      </select>
+                  </div>
+              </div>
+              <button class="component">Criar Componente</button>
+          </form>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="/assets/images/image.png" alt="upt_logo" class="upt-image">
+        <div class="logo_name">Gestão</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        
+        <li>
+          <a href="d_components.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name" >Componentes</span>
+          </a>
+          <span class="tooltip" style="color: black;">Componentes</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <div class="name_job">
+              <div class="name" id="userName">Nome Desenvolvedor</div>
+              <div class="job">Developer</div>
+            </div>
+          </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+
+    <section class="home-section">
+
+      <div class="table">
+        <div class="table_header">
+          <p style="font-size: 25px;">Componentes</p>
+          <div>
+            <button class="show-component"> + Nova Componente</button>
+            <input placeholder="Pesquisar Componente" id="comp_search">
+            <select class="roxinho" name="pesquisaComp" id="pesquisaComp" required tabindex="1">
+                <option value="0">Nome</option>
+                <option value="1">Data</option>
+            </select>
+            <button class="roxinho" id="search">Pesquisar</button>
+          </div>
+          <div class="toggle-button">
+            <button class="toggleDarkModeBtn" id="theme-toggle">Dark Mode</button>
+            <button class="languages">Português</button>
+        </div>
+        </div>
+
+        <div class="table_section">
+          <table>
+            <thead>
+            <tr>
+              <th>ID</th>
+              <th>Utilizador</th>
+              <th>ID Dependência</th>
+              <th>Nome</th>
+              <th>Descrição</th>
+              <th>Data</th>
+              <th>Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      
+    </section>  
+
+    <script src="/assets/js/developer/components.js"></script>
+  </body>
+</html>

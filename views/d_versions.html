@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/assets/css/pages/developer/versions.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+    <title>Versions</title>
+  </head>
+  <body>
+
+    <div class="popup_version">
+      <div class="close_version">&times;</div>
+      <div class="form">
+          <h2>Nova Versão</h2>
+          <form id="versionForm" action="/iVersion" method="POST">
+              <div class="form-element">
+                  <label for="version">Versão:</label>
+                  <input type="text" id="version" name="version" placeholder="Insira a Versão" required>
+                  <div id="versionError" style="color: red;"></div> <!-- Elemento de erro -->
+              </div>
+              <input type="hidden" name="id_comp" id="versionIdComp" value="">
+              <button class="version">Criar Versão</button>
+          </form>
+      </div>
+  </div>
+
+    <div class="popup_version">
+      <div class="close_version">&times;</div>
+      <div class="form">
+          <h2 style="color: var(--cor-roxo);">Nova Versão</h2>
+          <form id="versionForm" action="/iVersion" method="POST">
+            <div class="form-element">
+                <label for="nome">Nome da Componente:</label>
+                <input type="nome" id="nome" name="nome" placeholder="Insira Componente" required>
+            </div>
+            <button class="version">Criar</button>
+          </form>
+      </div>
+  </div>
+
+
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="/assets/images/image.png" alt="upt_logo" class="upt-image">
+        <div class="logo_name">Gestão</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        
+        <li>
+          <a href="d_components.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Componentes</span>
+          </a>
+          <span class="tooltip" style="color: black;">Componentes</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <div class="name_job">
+              <div class="name" id="userName">Nome Desenvolvedor</div>
+              <div class="job">Developer</div>
+            </div>
+          </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="home-section">
+
+      <div class="table">
+        <div class="table_header">
+          <p id="componentVersionsTitle" style="font-size: 25px;">Versoes da Componente</p>
+          <div>
+            <button class="show-version"> + Nova Versão</button>
+          </div>
+          <div class="toggle-button">
+            <button class="toggleDarkModeBtn" id="theme-toggle" >Dark Mode</button>
+            <button class="languages">Português</button>
+        </div>
+        </div>
+
+        <div class="table_section">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nome da Componente</th>
+                <th>Ultima Versão</th>
+                <th>Data De Criação</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    </section>  
+
+    <script src="/assets/js/developer/versions.js"></script>
+  </body>
+</html>

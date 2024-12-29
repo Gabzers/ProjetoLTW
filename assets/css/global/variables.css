@@ -1,0 +1,11 @@
+:root {
+    --cor-branca: #e0e0e0;
+    --cor-preto: #121212;
+    --cor-cinza-escuro: #333;
+    --cor-roxo: #272542;
+    --cor-azul-fundo: #E4E9F7;
+
+    --f1: clamp(1rem, 1vw, 1.2rem);
+    --f2: clamp(2rem, 1vw, 2.2rem);
+    --f3: clamp(3rem, 1vw, 3.2rem);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/pages/login/login.css">
+    <title>Login</title>
+</head>
+    <body>
+        <div class="toggle-button">
+            <div class="buttons-container">
+                <button class="toggleDarkModeBtn" id="theme-toggle" >Dark Mode</button>
+                <button class="languages">Português</button>
+            </div>
+            
+        </div>
+
+        <div class="container">
+            <div class="form-box">
+                <div class="form loginForm">
+                    <form id="loginForm" action="/ilogin" method="POST">
+                        <h3 class="loginText">Iniciar Sessão</h3>
+                        <input type="text" name="login" class="loginPlaceholder" placeholder="Utilizador" required>
+                        <input type="password" name="password" class="passwordPlaceholder" placeholder="Palavra-Passe" required>
+                        <input type="submit" class="loginButton" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    <script src="/assets/js/login/login.js"></script>
+    </body>
+</html>

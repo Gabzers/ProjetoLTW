@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Backups</title>
+    <link rel="stylesheet" href="/assets/css/pages/admin/backups.css" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="popup_backup">
+      <div class="close_backup">&times;</div>
+      <div class="form">
+          <h2>Backup</h2>
+          <form id="backupForm" action="/iBackup" method="POST">
+            <div class="form-element">
+                <label for="backup">Deseja mesmo criar um backup?</label>
+            </div>
+            <button class="backup">Sim</button>
+          </form>
+      </div>
+  </div>
+
+
+
+
+    <div class="sidebar">
+      <div class="logo-details">
+        <img src="/assets/images/image.png" alt="upt_logo" class="upt-image">
+        <div class="logo_name">Gestão</div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="a_users.html">
+            <i class="bx bx-user"></i>
+            <span class="links_name">Users</span>
+          </a>
+          <span class="tooltip" style="color: black;">Users</span>
+        </li>
+        <li>
+          <a href="a_backups.html">
+            <i class="bx bx-folder"></i>
+            <span class="links_name">Backups</span>
+          </a>
+          <span class="tooltip" style="color: black;">Backups</span>
+        </li>
+        <li class="profile">
+          <div class="profile-details">
+            <div class="name_job">
+              <div class="name" id="userName">Nome Login</div>
+              <div class="job">Administrador</div>
+            </div>
+          </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+
+    <section class="home-section">
+
+      <div class="table">
+        <div class="table_header">
+          <p style="font-size: 25px;">Backups</p>
+          <div>
+            <button class="show-backup"> + Novo Backup</button>
+          </div>
+          <div class="toggle-button">
+            <button class="toggleDarkModeBtn" id="theme-toggle">Dark Mode</button>
+            <button class="languages">Português</button>
+        </div>
+        </div>
+
+        <div class="table_section">
+          <table>
+            <thead>
+              <tr>
+                <th>DATA</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10-05-2024</td>
+                <td>
+                  <button><i class="fa-solid fa-boxes-packing"></i></button>
+                  <button><i class="fa-solid fa-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="/assets/js/admin/backups.js"></script>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/assets/css/pages/admin/a_users.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <title>Users</title>
+</head>
+<body>
+
+  <div class="popup_register">
+    <div class="close_register">&times;</div>
+    <div class="form">
+      <h2>Registo</h2>
+      <form id="registerForm" action="/iRegister" method="POST">
+        <div class="form-element">
+          <label for="login">Login:</label>
+          <input type="login" id="login" name="login" placeholder="Insira Login" required tabindex="1">
+        </div>
+        <div class="form-element">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" placeholder="Insira Password" required tabindex="1">
+        </div>
+        <div class="form-element">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Insira Nome" required tabindex="1">
+        </div>
+        <div class="form-element">
+          <label for="morada">Morada:</label>
+          <input type="text" id="morada" name="morada" placeholder="Insira Morada" required tabindex="1">
+        </div>
+        <div class="form-element">
+          <label for="nif">NIF:</label>
+          <input type="text" id="nif" name="nif" placeholder="Insira NIF" maxlength="9" required tabindex="1">
+      </div>
+        <div class="form-element">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Insira Email" required tabindex="1">
+        </div>
+        <div class="form-element">
+          <label for="type" class="type">Tipo:</label>
+          <div class="custom-select">
+            <select name="type" required tabindex="1">
+              <option value="0">Seleciona o tipo:</option>
+              <option value="1">Desenvolvedor</option>
+              <option value="2">Administrador</option>
+            </select>
+          </div>
+        </div>
+        <button class="register">Registar</button>
+      </form>
+    </div>
+  </div>
+
+<div class="sidebar">
+  <div class="logo-details">
+    <img src="/assets/images/image.png" alt="upt_logo" class="upt-image">
+    <div class="logo_name">Gestão</div>
+    <i class="bx bx-menu" id="btn"></i>
+  </div>
+  <ul class="nav-list">
+    <li>
+      <a href="a_users.html">
+        <i class="bx bx-user"></i>
+        <span class="links_name">Users</span>
+      </a>
+      <span class="tooltip" style="color: black;">Users</span>
+    </li>
+    <li>
+      <a href="a_backups.html">
+        <i class="bx bx-folder"></i>
+        <span class="links_name">Backups</span>
+      </a>
+      <span class="tooltip" style="color: black;">Backups</span>
+    </li>
+    <li class="profile">
+      <div class="profile-details">
+        <div class="name_job">
+          <div class="name" id="userName">Nome Login</div>
+          <div class="job">Aministrador</div>
+        </div>
+      </div>
+      <i class="bx bx-log-out" id="log_out"></i>
+    </li>
+  </ul>
+</div>
+
+<section class="home-section">
+  <div class="table">
+    <div class="table_header">
+      <p style="font-size: 25px;">Utilizadores</p>
+      <div>
+        <button class="show-register"> + Novo Utilizador</button>
+      </div>
+      <div class="toggle-button">
+        <button class="toggleDarkModeBtn" id="theme-toggle" >Dark Mode</button>
+        <button class="languages">Português</button>
+      </div>
+    </div>
+    <div class="table_section">
+      <table>
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Login</th>
+          <th>Nome</th>
+          <th>Morada</th>
+          <th>NIF</th>
+          <th>Email</th>
+          <th>Permissões</th>
+          <th>Atividade</th>
+          <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  
+  <div class="popup_edit">
+    <div class="close_edit">&times;</div>
+    <div class="form">
+        <h2>Editar Utilizador</h2>
+        <form id="editForm" action="" method="POST">
+            <input type="hidden" id="editUserId" name="userId">
+
+            <div class="form-element">
+                <label for="editLogin">Login:</label>
+                <input type="login" id="editLogin" name="new_login" placeholder="Insira Login" required tabindex="1">
+                <span id="editLoginError" style="color: red;"></span>
+            </div>
+            <div class="form-element">
+                <label for="editPassword">Nova Password:</label>
+                <input type="password" id="editPassword" name="password" placeholder="Insira Nova Password" tabindex="1">
+            </div>
+            <div class="form-element">
+                <label for="editNome">Nome:</label>
+                <input type="text" id="editNome" name="nome" placeholder="Insira Nome" required tabindex="1">
+            </div>
+            <div class="form-element">
+                <label for="editMorada">Morada:</label>
+                <input type="text" id="editMorada" name="morada" placeholder="Insira Morada" required tabindex="1">
+            </div>
+            <div class="form-element">
+                <label for="editNif">NIF:</label>
+                <input type="text" id="editNif" name="nif" placeholder="Insira NIF" maxlength="9" required tabindex="1">
+            </div>
+            <div class="form-element">
+                <label for="editEmail">Email:</label>
+                <input type="email" id="editEmail" name="email" placeholder="Insira Email" required tabindex="1">
+            </div>
+            <div class="form-element">
+                <label for="editType" class="type" id="editType" name="editType">Tipo:</label>
+                <div class="custom-select">
+                    <select name="type" id="editType" required tabindex="1">
+                        <option value="1">Desenvolvedor</option>
+                        <option value="2">Administrador</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-element">
+                <label for="editActive">Ativo:</label>
+                <input type="checkbox" id="editActive" name="active" tabindex="1">
+            </div>
+            <button class="edit">Guardar Alterações</button>
+        </form>
+    </div>
+</div>
+
+</section>
+<script src="/assets/js/admin/users.js"></script>
+</body>
+</html>

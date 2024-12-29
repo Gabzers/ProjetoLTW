@@ -1,0 +1,21 @@
+{
+  "name": "ltw-es-47719-47713-46997",
+  "version": "1.0.0",
+  "description": "Projeto LTW-ES, UPT 2º ANO ENG INF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "47719, 47713, 46997",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.7",
+    "sequelize": "^6.37.3"
+  }
+}

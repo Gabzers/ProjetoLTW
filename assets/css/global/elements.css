@@ -1,0 +1,7 @@
+.toggle-button button {
+    padding: 10px 20px;
+    background: var(--cor-roxo);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

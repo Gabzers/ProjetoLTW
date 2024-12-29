@@ -1,0 +1,121 @@
+@import '../../global/global.css';
+
+/* Estilos básicos do corpo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--cor-azul-fundo);
+    color: var(--cor-cinza-escuro); /* Cor do texto padrão */
+    transition: background .5s, color .5s; /* Adicionada transição para a cor de fundo e do texto */
+    margin: 0; /* Adicionado para remover margens padrão */
+}
+
+/* Modo escuro para o corpo */
+body.dark-mode {
+    background: var(--cor-preto);
+    color: var(--cor-branca);
+}
+
+/* Container principal */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Caixa do formulário */
+.form-box {
+    position: absolute;
+    background: #fff;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, .25);
+    transition: ease-in-out .5s, box-shadow .5s;
+    overflow: hidden;
+}
+
+/* Estilo dos formulários */
+.form-box .form {
+    position: relative;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box; /* Adicionado para incluir padding na largura */
+}
+
+/* Formulário de login */
+.form-box .signInForm {
+    display: block; /* Alterado para exibir o formulário inicialmente */
+}
+
+/* Estilo dos inputs do formulário */
+.form-box .form form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.form form input {
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--cor-cinza-escuro);
+    transition: background-color .5s, color .5s; /* Adicionada transição para a cor de fundo e do texto */
+}
+
+/* Título do formulário */
+.form form h3 {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Botões de envio do formulário */
+.form form input[type="submit"] {
+    background: #555; /* Nova cor do botão */
+    border: none;
+    max-width: 100px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Botão de alternância para o modo escuro/claro */
+
+
+/* Estilos específicos para o modo escuro */
+body.dark-mode {
+    background: var(--cor-preto);
+    color: var(--cor-branca); /* Cor do texto no modo escuro */
+}
+
+body.dark-mode .form-box {
+    background: var(--cor-cinza-escuro);
+}
+
+body.dark-mode .form-box .form form input {
+    background-color: #222; /* Cor do fundo do input no modo escuro */
+    color: var(--cor-branca); /* Cor do texto do input no modo escuro */
+    border-color: #555; /* Cor da borda do input no modo escuro */
+}
+
+body.dark-mode .form-box .form form h3 {
+    color: var(--cor-branca); /* Cor do texto do título no modo escuro */
+}
+
+.buttons-container {
+    position: absolute;
+    float: right; /* Alinha a div no canto superior direito */
+    top: 0; /* Ajusta o espaçamento superior conforme necessário */
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.buttons-container button {
+    margin-left: 10px; /* Adiciona margem entre os botões */
+}
